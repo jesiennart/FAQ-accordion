@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100wh;
+  background-color: hsl(275, 100%, 97%);
+  font-family: "Work Sans", Courier, monospace;
+}
+
+.background {
+  max-width: 100dvw;
+  height: 25dvh;
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-size: cover;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+h1 {
+  color: black;
+  margin-left: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.quest-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quest {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.answer {
+  max-height: 0px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.line {
+  width: 100%;
+  height: 1px;
+  border: 1px solid rgb(225, 225, 225);
+  margin-bottom: 1.5rem;
+}
+.fa-circle-plus {
+  display: block;
+  font-size: 1.5rem;
+  color: hsl(286, 98%, 45%);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+/* 1. klasa, która posiada show, 2. element. który zmianiamy */
+.question.show .fa-circle-plus {
+  display: none;
+}
+
+.fa-circle-minus {
+  font-size: 1.5rem;
+  color: hsl(286, 98%, 45%);
+  display: none;
+  cursor: pointer;
+}
+/* 1. klasa, która posiada show, 2. element. który zmianiamy */
+.question.show .fa-circle-minus {
+  display: block;
+}
+/* 1. klasa, która posiada show, 2. element. który zmianiamy */
+.question.show .answer {
+  max-height: 220px;
+}
+
+.attribution {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  top: 100%;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(286, 98%, 45%);
+}
+
+@media (max-width: 450px) {
+  .background {
+    width: 100dvw;
+    height: 35dvh;
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-size: cover;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 270px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    color: black;
+    margin-left: 1rem;
+    font-weight: bolder;
+  }
+
+  .question {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+  .quest-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quest {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .answer {
+    max-height: 0px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    border: 1px solid rgb(225, 225, 225);
+    margin-bottom: 1.5rem;
+  }
+  .fa-circle-plus {
+    display: block;
+    font-size: 1.5rem;
+    color: hsl(286, 98%, 45%);
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  /* 1. klasa, która posiada show, 2. element. który zmianiamy */
+  .question.show .fa-circle-plus {
+    display: none;
+  }
+
+  .fa-circle-minus {
+    font-size: 1.5rem;
+    color: hsl(286, 98%, 45%);
+    display: none;
+    cursor: pointer;
+  }
+  /* 1. klasa, która posiada show, 2. element. który zmianiamy */
+  .question.show .fa-circle-minus {
+    display: block;
+  }
+  /* 1. klasa, która posiada show, 2. element. który zmianiamy */
+  .question.show .answer {
+    max-height: 200px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 1024px) {
+  .background {
+    width: 100dvw;
+    height: 35dvh;
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-size: cover;
+  }
+  .container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 400px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    color: black;
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .question {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+  .quest-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quest {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .answer {
+    max-height: 0px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    border: 1px solid rgb(225, 225, 225);
+    margin-bottom: 1.5rem;
+  }
+  .fa-circle-plus {
+    display: block;
+    font-size: 1.5rem;
+    color: hsl(286, 98%, 45%);
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  /* 1. klasa, która posiada show, 2. element. który zmianiamy */
+  .question.show .fa-circle-plus {
+    display: none;
+  }
+
+  .fa-circle-minus {
+    font-size: 1.5rem;
+    color: hsl(286, 98%, 45%);
+    display: none;
+    cursor: pointer;
+  }
+  /* 1. klasa, która posiada show, 2. element. który zmianiamy */
+  .question.show .fa-circle-minus {
+    display: block;
+  }
+  /* 1. klasa, która posiada show, 2. element. który zmianiamy */
+  .question.show .answer {
+    max-height: 220px;
+  }
+}
